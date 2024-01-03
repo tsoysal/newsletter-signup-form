@@ -10,6 +10,14 @@
     font-weight: 600;
 }
 
+@keyframes horizontal-shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(5px); }
+    50% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
 :root {
     --primary-color: hsl(4, 100%, 67%);
     --dark-grey: hsl(234, 29%, 20%);
@@ -73,8 +81,26 @@ form {
     margin-top: 30px;
 }
 
+.labels {
+    display: flex;
+    justify-content: space-between;
+}
+
+form span {
+    display: inline-block;
+    font-size: .75em;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    animation: horizontal-shake 0.4s;
+}
+
+.hide {
+    display: none;
+}
+
 form label {
-    display: block;
+    display: inline-block;
     font-size: .75em;
     font-weight: 600;
     margin-bottom: 5px;
@@ -93,6 +119,17 @@ form input {
 
 form input:focus {
     border: 1px solid rgba(0, 0, 0, 0.8)
+}
+
+.input-error-state {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: #ffeaed;
+    animation: horizontal-shake 0.4s ease;
+}
+
+.input-error-state:focus {
+    border: 2px solid var(--primary-color);
 }
 
 form button {

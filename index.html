@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <section>
     <div class="content">
@@ -19,9 +22,12 @@
         <li><img src="./assets/images/icon-list.svg" alt="list icon">Measuring to ensure updates are a success</li>
         <li><img src="./assets/images/icon-list.svg" alt="list icon">And much more!</li>
       </ul>
-      <form>
-        <label for="mail">Email address</label>
-        <input type="email" name="mail" id="mail" placeholder="email@company.com" required>
+      <form name="myForm" onsubmit="return validateForm()">
+        <div class="labels">
+          <label for="mail">Email address</label>
+          <span class="error hide">Valid email required</span>
+        </div>
+        <input type="mail" name="mail" id="mail" placeholder="email@company.com">
         <button type="submit">Subscribe to monthly newsletter</button>
       </form>
     </div>
@@ -30,5 +36,8 @@
       <img src="./assets/images/illustration-sign-up-mobile.svg" alt="mobile cover" class="mobile-img">
     </div>
   </section>
+
+  <script src="./formValidation.js"></script>
 </body>
+
 </html>

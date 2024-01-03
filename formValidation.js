@@ -29,7 +29,12 @@ function validateForm(event) {
 
 function activateError() {
     errorMsg.classList.remove('hide');
-    inputBox.classList.add('input-error-state');
+    inputBox.classList.add('input-error-state')
+    // trigger animation to repeat every time 
+    inputBox.style.animation = 'none';
+    setTimeout(() => {
+      inputBox.style.animation = 'horizontal-shake 0.4s ease';
+    }, 0);
 }
 
 function deactivateError() {

@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Bold.ttf');
+    font-weight: 600;
+}
+
+:root {
+    --primary-color: hsl(4, 100%, 67%);
+    --dark-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey-color: hsl(231, 7%, 60%);
+    --white-color: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--charcoal-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+section {
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--dark-grey);
+    border-radius: 40px;
+    padding: 20px 30px;
+}
+
+.content {
+    max-width: 53%;
+    padding: 0px 30px;
+}
+
+.content h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}
+
+ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+ul li img {
+    margin-right: 10px;
+}
+
+form {
+    margin-top: 30px;
+}
+
+form label {
+    display: block;
+    font-size: .75em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+form input {
+    font-family: inherit;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    font-size: 1em;
+    padding: 15px;
+}
+
+form button {
+    font-family: inherit;
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1em;
+    background-color: var(--dark-grey);
+    color: var(--white-color);
+    letter-spacing: 1px;
+}
+
+.mobile-img {
+    display: none;
+}

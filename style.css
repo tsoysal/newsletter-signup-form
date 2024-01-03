@@ -41,7 +41,7 @@ body {
     min-height: 100vh;
 }
 
-section {
+main {
     background-color: var(--white-color);
     display: flex;
     align-items: center;
@@ -154,4 +154,51 @@ form button:hover {
 
 .mobile-img {
     display: none;
+}
+
+/* Success page */
+section {
+    display: none;
+    max-width: 400px;
+    background-color: var(--white-color);
+    padding: 50px;
+    color: var(--dark-grey);
+    border-radius: 30px;
+}
+
+section img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 3em;
+    line-height: 1em;
+    margin-bottom: 20px;
+}
+
+section p {
+    line-height: 1.4em;
+    margin-bottom: 30px;
+}
+
+section button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: var(--dark-grey);
+    border-radius: 8px;
+    color: var(--white-color);
+    font-weight: 600;
+    font-family: inherit;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+section button:hover {
+    background-image: linear-gradient(to right,#FF5478,#FF6A3A);
+}
+
+.email {
+    font-weight: 600;
 }

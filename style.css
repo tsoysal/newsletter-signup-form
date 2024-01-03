@@ -91,6 +91,10 @@ form input {
     padding: 15px;
 }
 
+form input:focus {
+    border: 1px solid rgba(0, 0, 0, 0.8)
+}
+
 form button {
     font-family: inherit;
     display: block;
@@ -105,6 +109,10 @@ form button {
     background-color: var(--dark-grey);
     color: var(--white-color);
     letter-spacing: 1px;
+}
+
+form button:hover {
+    background-image: linear-gradient(to right,#FF5478,#FF6A3A);
 }
 
 .mobile-img {
